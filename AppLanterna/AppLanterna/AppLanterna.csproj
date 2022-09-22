@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,21 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="image\botao_desligado.png" />
+    <None Remove="image\botao_ligado.png" />
     <None Remove="image\button off.png" />
     <None Remove="image\button on.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="image\button off.png">
+    <EmbeddedResource Include="image\botao_desligado.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="image\button on.png">
+    <EmbeddedResource Include="image\botao_ligado.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xam.Plugin.Battery" Version="4.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
   </ItemGroup>
 </Project>
